@@ -1,0 +1,13 @@
+C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog-template.Data.deps.json
+C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog-template.Data.runtimeconfig.json
+C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog-template.Data.runtimeconfig.dev.json
+C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog-template.Data.dll
+C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog-template.Data.pdb
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.csproj.AssemblyReference.cache
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.AssemblyInfoInputs.cache
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.AssemblyInfo.cs
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.csproj.CoreCompileInputs.cache
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.dll
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.pdb
+C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog-template.Data.genruntimeconfig.cache
