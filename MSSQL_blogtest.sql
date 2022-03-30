@@ -20,7 +20,7 @@ BEGIN
 	  UserID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	  LastName varchar(30) DEFAULT NULL,
 	  FirstName varchar(30) NOT NULL,
-	  UserName varchar(80) NOT NULL,
+	  Username varchar(80) NOT NULL UNIQUE,
 	  Password varchar(255) NOT NULL,
 	  AccessLevel varchar(1) NOT NULL
 	);
@@ -48,14 +48,14 @@ BEGIN
 	CREATE TABLE comment (
 	  CommentID int PRIMARY KEY NOT NULL IDENTITY,
 	  Date datetime NOT NULL,
-	  UserName int FOREIGN KEY REFERENCES users (UserID) NOT NULL,
+	  Username int FOREIGN KEY REFERENCES users (UserID) NOT NULL,
 	  Textbox text NOT NULL,
 	  BlogID int FOREIGN KEY REFERENCES blog (BlogID) NOT NULL
 	);
 END
 
 
-INSERT INTO [user] ([LastName],[FirstName],[UserName],[Password],[AccessLevel])
+INSERT INTO [user] ([LastName],[FirstName],[Username],[Password],[AccessLevel])
 VALUES
   ('Mills','Kirsten','eleifend','BPF80NIJ5WJ','1'),
   ('Valentine','Yoshio','accumsan','JYR71ENW8KM','1'),
@@ -72,7 +72,7 @@ VALUES
   ('ac, eleifend','2022-07-14',1,'Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget','TOR67PBZ4MA','TDF67EFM3JE','APH43NWV1SY','ISN89DQY7VL'),
   ('velit eget','2021-09-20',1,'ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum','CHH24MJN5TA','GXF84COR9IC','VAI15QNQ8VP','HJE88IIN1IV');
 
-INSERT INTO comment([Date],[UserName],[TextBox],[BlogID])
+INSERT INTO comment([Date],[Username],[TextBox],[BlogID])
 VALUES
   ('Sep 12, 2021',2,'Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue',1),
   ('Jan 31, 2023',3,'molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis.',4),

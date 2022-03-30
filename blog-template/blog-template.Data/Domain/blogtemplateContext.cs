@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
-// #nullable disable
+#nullable disable
 
 namespace blog_template.Data.Domain
 {
@@ -137,7 +137,7 @@ namespace blog_template.Data.Domain
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.UserName)
+                entity.Property(e => e.Username)
                     .IsRequired()
                     .HasMaxLength(80)
                     .IsUnicode(false);

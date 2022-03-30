@@ -1,15 +1,11 @@
 using blog_template.Data.Domain;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace blog_template.App
 {
@@ -27,6 +23,8 @@ namespace blog_template.App
         {
             services.AddDbContext<BlogTemplateContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("BlogConnection")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
+                AddCookie(opt => opt.LoginPath = "/User/Login");
 
             services.AddControllersWithViews();
         }
@@ -48,15 +46,15 @@ namespace blog_template.App
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    //pattern: "{controller=Home}/{action=Index}/{id?}");
-                    pattern: "{controller=Blog}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //pattern: "{controller=Blog}/{action=Index}/{id?}");
             });
         }
     }

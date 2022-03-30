@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\blog-template.Data\blog_template.Data.csproj" />
+    <ProjectReference Include="..\blog_template.BLL\blog_template.BLL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

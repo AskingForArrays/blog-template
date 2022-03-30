@@ -1,4 +1,4 @@
-﻿@model blog_template.Data.Domain.User
+﻿@model blog_template.App.Models.UserViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -13,11 +13,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="LastName" class="control-label"></label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
@@ -28,9 +23,9 @@
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
@@ -38,12 +33,7 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AccessLevel" class="control-label"></label>
-                <input asp-for="AccessLevel" class="form-control" />
-                <span asp-validation-for="AccessLevel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" asp-controller="User" asp-action="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>

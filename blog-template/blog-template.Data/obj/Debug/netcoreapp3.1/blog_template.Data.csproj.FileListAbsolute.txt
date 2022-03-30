@@ -3,7 +3,6 @@ C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1
 C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog_template.Data.runtimeconfig.dev.json
 C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog_template.Data.dll
 C:\GitHub\blog-template\blog-template\blog-template.Data\bin\Debug\netcoreapp3.1\blog_template.Data.pdb
-C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog_template.Data.csproj.AssemblyReference.cache
 C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog_template.Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog_template.Data.AssemblyInfoInputs.cache
 C:\GitHub\blog-template\blog-template\blog-template.Data\obj\Debug\netcoreapp3.1\blog_template.Data.AssemblyInfo.cs

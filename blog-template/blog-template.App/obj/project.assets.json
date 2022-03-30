@@ -2575,6 +2575,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "blog_template.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "blog_template.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/blog_template.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/blog_template.BLL.dll": {}
+        }
+      },
       "blog_template.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -8478,6 +8491,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "blog_template.BLL/1.0.0": {
+      "type": "project",
+      "path": "../blog_template.BLL/blog_template.BLL.csproj",
+      "msbuildProject": "../blog_template.BLL/blog_template.BLL.csproj"
+    },
     "blog_template.Data/1.0.0": {
       "type": "project",
       "path": "../blog-template.Data/blog_template.Data.csproj",
@@ -8489,6 +8507,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.23",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.23",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
+      "blog_template.BLL >= 1.0.0",
       "blog_template.Data >= 1.0.0"
     ]
   },
@@ -8521,6 +8540,9 @@
           "projectReferences": {
             "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog_template.Data.csproj": {
               "projectPath": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog_template.Data.csproj"
+            },
+            "C:\\GitHub\\blog-template\\blog-template\\blog_template.BLL\\blog_template.BLL.csproj": {
+              "projectPath": "C:\\GitHub\\blog-template\\blog-template\\blog_template.BLL\\blog_template.BLL.csproj"
             }
           }
         }

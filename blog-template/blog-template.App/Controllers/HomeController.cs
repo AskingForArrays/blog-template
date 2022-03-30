@@ -1,4 +1,5 @@
 ﻿using blog_template.App.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,6 +24,7 @@ namespace blog_template.App.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
