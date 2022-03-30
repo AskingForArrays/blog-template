@@ -5726,9 +5726,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog-template.Data.csproj",
-      "projectName": "blog-template.Data",
-      "projectPath": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog-template.Data.csproj",
+      "projectUniqueName": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog_template.Data.csproj",
+      "projectName": "blog_template.Data",
+      "projectPath": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\blog_template.Data.csproj",
       "packagesPath": "C:\\Users\\Tim\\.nuget\\packages\\",
       "outputPath": "C:\\GitHub\\blog-template\\blog-template\\blog-template.Data\\obj\\",
       "projectStyle": "PackageReference",

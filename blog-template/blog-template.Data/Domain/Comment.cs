@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace blog_template.Data.Domain
 {
-    public partial class Comments
+    public partial class Comment
     {
         public int CommentId { get; set; }
         public DateTime Date { get; set; }
@@ -16,6 +16,6 @@ namespace blog_template.Data.Domain
         public int BlogId { get; set; }
 
         public virtual Blog Blog { get; set; }
-        public virtual Users UserNameNavigation { get; set; }
+        public virtual User UserNameNavigation { get; set; }
     }
 }

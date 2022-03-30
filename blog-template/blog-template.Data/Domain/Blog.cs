@@ -11,7 +11,7 @@ namespace blog_template.Data.Domain
     {
         public Blog()
         {
-            Comments = new HashSet<Comments>();
+            Comment = new HashSet<Comment>();
         }
 
         public int BlogId { get; set; }
@@ -24,7 +24,7 @@ namespace blog_template.Data.Domain
         public string Picture3 { get; set; }
         public string Picture4 { get; set; }
 
-        public virtual Users User { get; set; }
-        public virtual ICollection<Comments> Comments { get; set; }
+        public virtual User User { get; set; }
+        public virtual ICollection<Comment> Comment { get; set; }
     }
 }

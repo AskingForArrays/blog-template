@@ -7,12 +7,12 @@ using System.Collections.Generic;
 
 namespace blog_template.Data.Domain
 {
-    public partial class Users
+    public partial class User
     {
-        public Users()
+        public User()
         {
             Blog = new HashSet<Blog>();
-            Comments = new HashSet<Comments>();
+            Comment = new HashSet<Comment>();
         }
 
         public int UserId { get; set; }
@@ -23,6 +23,6 @@ namespace blog_template.Data.Domain
         public string AccessLevel { get; set; }
 
         public virtual ICollection<Blog> Blog { get; set; }
-        public virtual ICollection<Comments> Comments { get; set; }
+        public virtual ICollection<Comment> Comment { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using blog_template.Data;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -9,20 +8,20 @@ using blog_template.Data;
 
 namespace blog_template.Data.Domain
 {
-    public partial class blogtemplateContext : DbContext
+    public partial class BlogTemplateContext : DbContext
     {
-        public blogtemplateContext()
+        public BlogTemplateContext()
         {
         }
 
-        public blogtemplateContext(DbContextOptions<blogtemplateContext> options)
+        public BlogTemplateContext(DbContextOptions<BlogTemplateContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Blog> Blog { get; set; }
-        public virtual DbSet<Comments> Comments { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +29,7 @@ namespace blog_template.Data.Domain
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 DBConnect connect = new DBConnect();
+                
                 optionsBuilder.UseSqlServer(connect.connectionString);
             }
         }
@@ -81,12 +81,9 @@ namespace blog_template.Data.Domain
                     .HasConstraintName("FK__blog__UserID__2D27B809");
             });
 
-            modelBuilder.Entity<Comments>(entity =>
+            modelBuilder.Entity<Comment>(entity =>
             {
-                entity.HasKey(e => e.CommentId)
-                    .HasName("PK__comments__C3B4DFAA20DA165E");
-
-                entity.ToTable("comments");
+                entity.ToTable("comment");
 
                 entity.Property(e => e.CommentId)
                     .HasColumnName("CommentID")
@@ -101,24 +98,21 @@ namespace blog_template.Data.Domain
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.Blog)
-                    .WithMany(p => p.Comments)
+                    .WithMany(p => p.Comment)
                     .HasForeignKey(d => d.BlogId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__comments__BlogID__33D4B598");
 
                 entity.HasOne(d => d.UserNameNavigation)
-                    .WithMany(p => p.Comments)
+                    .WithMany(p => p.Comment)
                     .HasForeignKey(d => d.UserName)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__comments__UserNa__32E0915F");
             });
 
-            modelBuilder.Entity<Users>(entity =>
+            modelBuilder.Entity<User>(entity =>
             {
-                entity.HasKey(e => e.UserId)
-                    .HasName("PK__users__1788CCACAB61D894");
-
-                entity.ToTable("users");
+                entity.ToTable("user");
 
                 entity.Property(e => e.UserId)
                     .HasColumnName("UserID")
